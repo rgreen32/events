@@ -1,0 +1,1 @@
+# Examples of the onclick Javascript Events

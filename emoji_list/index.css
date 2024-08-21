@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.radio-buttons {
+    margin-bottom: 20px;
+}
+
+.radio-buttons label {
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emoji-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.emoji {
+    font-size: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Grid</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="radio-buttons">
+        <label><input type="radio" name="filter" value="all" checked> All Emojis</label>
+        <label><input type="radio" name="filter" value="happy"> Happy Emojis</label>
+        <label><input type="radio" name="filter" value="sad"> Sad Emojis</label>
+        <label><input type="radio" name="filter" value="weird"> Weird Emojis</label>
+    </div>
+
+    <div class="emoji-grid">
+        <!-- Happy Emojis -->
+        <span class="emoji happy">😊</span>
+        <span class="emoji happy">😁</span>
+        <span class="emoji happy">😄</span>
+        <span class="emoji happy">😃</span>
+        <span class="emoji happy">😍</span>
+
+        <!-- Sad Emojis -->
+        <span class="emoji sad">😢</span>
+        <span class="emoji sad">😭</span>
+        <span class="emoji sad">😞</span>
+        <span class="emoji sad">😔</span>
+        <span class="emoji sad">😟</span>
+
+        <!-- Weird Emojis -->
+        <span class="emoji weird">🤪</span>
+        <span class="emoji weird">😜</span>
+        <span class="emoji weird">😝</span>
+        <span class="emoji weird">😵</span>
+        <span class="emoji weird">😬</span>
+    </div>
+
+    <script>
+        const radioButtons = document.querySelectorAll('input[name="filter"]');
+        const emojis = document.querySelectorAll('.emoji');
+
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', () => {
+                const filter = radio.value;
+
+                emojis.forEach(emoji => {
+                    emoji.classList.remove('hidden');
+                    if (filter !== 'all' && !emoji.classList.contains(filter)) {
+                        emoji.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

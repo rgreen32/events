@@ -1,0 +1,43 @@
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div {
+        text-align: center;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+
+
+
+
+
+    #emoji {
+        font-size: 3em;
+    }
+
+    .rotate{
+        animation: rotate360 2s;
+    }
+
+    @keyframes rotate360 {
+        from { transform: rotate(0deg) ;}
+        to { transform: rotate(360deg);}
+    }
+
+</style>
+
+<body>
+    <div>
+        <h1 id="emoji">😊</h1>
+        <button onclick='
+            let emojiHTML = document.getElementById("emoji")
+            emojiHTML.classList = "rotate"
+        ' >spin</button>
+    </div>
+</body>
